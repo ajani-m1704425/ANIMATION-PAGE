@@ -1,0 +1,187 @@
+<!-- <div id="editNoteOverlay">
+            <section class="edit">
+                <div class="head">
+                  <div class="head1">
+                      <div class="change"></div>
+                      <select name="color" id="color" onchange="colorbg(this)">
+                        <option value="#ffcccc" class="one"></option>
+                        <option value="#866ac4" class="two" selected></option>
+                        <option value="#3a0ca3" class="three"></option>
+                        <option value="#00f8a9" class="four"></option>
+                        <option value="#00574e" class="five"></option>
+                      </select>
+                  </div>
+                  <div class="stroke">|</div>
+                  <div class="head2">
+                    <span
+                      class="iconify bullet"
+                      data-icon="fluent:text-bullet-list-ltr-24-filled"
+                    ></span>
+                  </div>
+                  <div class="stroke str1">|</div>
+                  <div class="head3">
+                    <span class="iconify pin" data-icon="entypo:pin"></span>
+                  </div>
+                  <div class="stroke str2">|</div>
+                  <div class="head4">
+                    <span
+                      class="iconify submit"
+                      data-icon="bi:arrow-down-circle-fill"
+                    ></span>
+                  </div>
+                  <div class="stroke str3">|</div>
+                  <div class="head5">
+                    <span
+                      class="iconify delete"
+                      data-icon="fluent:delete-24-regular"
+                    ></span>
+                  </div>
+                </div>
+                <textarea
+                  name="addtext"
+                  id="addtext"
+                  cols="20"
+                  rows="30"
+                  class="text"
+                ></textarea>
+            </section>
+        </div>
+
+        <div class="favouriteOverlay">
+            <section class="favouritecard">
+                <div class="searchbar">
+                  <div class="searchinput">
+                    <span class="iconify bxsearch" data-icon="bx:search"></span>
+                    <input type="search" name="search" id="search" placeholder="search" />
+                  </div>
+                  <span class="iconify bxfilter" data-icon="bx:filter"></span>
+                </div>
+                <div class="move moveup">
+                  <div class="direction">Move_Up</div>
+                  <div class="icon">
+                    <span class="iconify" data-icon="bx:edit-alt"></span>
+                    <span class="iconify" data-icon="ri:delete-bin-line"></span>
+                  </div>
+                </div>
+                <div class="move movedown">
+                  <div class="direction">Move_Down</div>
+                  <div class="icon">
+                    <span class="iconify" data-icon="bx:edit-alt"></span>
+                    <span class="iconify" data-icon="ri:delete-bin-line"></span>
+                  </div>
+                </div>
+                <div class="move moveleft">
+                  <div class="direction">Move_Left</div>
+                  <div class="icon">
+                    <span class="iconify" data-icon="bx:edit-alt"></span>
+                    <span class="iconify" data-icon="ri:delete-bin-line"></span>
+                  </div>
+                </div>
+                <div class="move moveblink">
+                  <div class="direction">Blink</div>
+                  <div class="icon">
+                    <span class="iconify" data-icon="bx:edit-alt"></span>
+                    <span class="iconify" data-icon="ri:delete-bin-line"></span>
+                  </div>
+                </div>
+                <div class="move movebounce">
+                  <div class="direction">Bounce</div>
+                  <div class="icon">
+                    <span class="iconify" data-icon="bx:edit-alt"></span>
+                    <span class="iconify" data-icon="ri:delete-bin-line"></span>
+                  </div>
+                </div>
+                <div class="move movefade">
+                  <div class="direction">Fade</div>
+                  <div class="icon">
+                    <span class="iconify" data-icon="bx:edit-alt"></span>
+                    <span class="iconify" data-icon="ri:delete-bin-line"></span>
+                  </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="profileOverlay">
+            <section class="profilecard">
+                <div class="profilehead">
+                  <span
+                    class="iconify end"
+                    id="close"
+                    data-icon="uiw:circle-close-o"
+                    style="color: #716e7a"
+                    onclick="window.open('','_self','');window.close();"
+                  ></span>
+                </div>
+                <div class="profilename"></div>
+                <div class="name">AO</div>
+                <div class="fullname">Full name</div>
+                <div class="email">Email</div>
+                <div class="changepass">
+                  <span class="iconify" data-icon="arcticons:lock"></span>
+                  <div class="passwords"><a class="none" href="">Change Password</a></div>
+                </div>
+                <div class="note">
+                  <span class="iconify" data-icon="lucide:sticky-note"></span>
+                  <div class="notewords">
+                    <a class="none" href="user_note.html">Notes</a>
+                  </div>
+                </div>
+                <div class="favourites">
+                  <span class="iconify" data-icon="akar-icons:star"></span>
+                  <div class="favwords">
+                    <a class="none" href="favourite.html">Favourites</a>
+                  </div>
+                </div>
+                <div class="logout">
+                  <span class="iconify" data-icon="ri:logout-circle-line"></span>
+                  <div class="logwords"><a class="none" href="">Log Out</a></div>
+                </div>
+            </section>
+        </div>
+
+        <div id="userNoteOverlay">
+            <section class="note">
+                <div class="head">
+                  <span class="iconify find" data-icon="bi:search"></span>
+                  <input type="search" name="search" id="search" placeholder="Search" />
+                  <span
+                    class="iconify arrow"
+                    data-icon="gridicons:dropdown"
+                    onclick="toggleText()"
+                  ></span>
+                </div>
+                <hr class="line" />
+                <div class="add">
+                  <span class="iconify plus" data-icon="bx:plus-circle"></span>
+                  <p class="add_note">
+                    <a href="edit_notes.html" class="none">Add Note</a>
+                  </p>
+                </div>
+            </section>
+            <section id="notes">
+                <div class="messages">
+                  <div class="colortime">
+                    <div class="notecolor"></div>
+                    <span class="iconify pin" data-icon="entypo:pin"></span>
+                    <p class="time">02:00pm</p>
+                  </div>
+                  <div class="essay">
+                    <h4 class="hessay">Ways To Adapt Move-Up</h4>
+                    <p class="pessay">
+                      It is a long established fact that a reader will be distracted by
+                      the readable content ...
+                    </p><br><br>
+                    <p class="publish">3 weeks ago</p>
+                  </div>
+                  <div class="threedot">
+                    <span class="iconify" data-icon="bi:three-dots"></span>
+                    <div class="dropdown">
+                      <a class="edit" href="#">Edit Note</a>
+                      <a class="unpin" href="#">Unpin Note</a>
+                      <a class="delete" href="#">Delete Note</a>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        </div>
+   -->

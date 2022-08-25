@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animation Library</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="panel">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+
+                <div class="animation_options">
+                    <div class="upOption">
+                        <span >
+                            <i class="fa-regular fa-star" id="icon"></i>
+                        </span>
+                        <span  onclick="moveUp()">MOVE_UP</span>    
+                    </div>
+                    <div class="downOption">
+                        <span >
+                            <i class="fa-regular fa-star" id="icon"></i>
+                        </span>
+                        <span  onclick="moveDown()">MOVE_DOWN</span>    
+                    </div>
+                    <div class="leftOption">
+                        <span >
+                            <i class="fa-regular fa-star" id="icon"></i>
+                        </span>
+                        <span  onclick="moveLeft()">MOVE_LEFT</span>    
+                    </div>
+                    <div class="rightOption">
+                        <span >
+                            <i class="fa-regular fa-star" id="icon"></i>
+                        </span>
+                        <span  onclick="moveRight()">APPEAR_FROM_RIGHT</span>    
+                    </div>
+                    <div class="bounceOption">
+                        <span >
+                            <i class="fa-regular fa-star" id="icon"></i>
+                        </span>
+                        <span  onclick="bounce()">BOUNCE</span>    
+                    </div>
+                    <div class="rotateOption">
+                        <span >
+                            <i class="fa-regular fa-star" id="icon"></i>
+                        </span>
+                        <span  onclick="rotate()">ROTATE</span>    
+                    </div>
+                    <div class="blinkOption">
+                        <span >
+                            <i class="fa-regular fa-star" id="icon"></i>
+                        </span>
+                        <span  onclick="blink()">BLINK</span>    
+                    </div>
+                    <div class="trembleOption">
+                        <span >
+                            <i class="fa-regular fa-star" id="icon"></i>
+                        </span>
+                        <span onclick="tremble()">TREMBLE</span>    
+                    </div>
+                    <div class="fadeOption">
+                        <span >
+                            <i class="fa-regular fa-star" id="icon"></i>
+                        </span>
+                        <span  onclick="fade()">FADE</span>    
+                    </div>
+                </div>
+
+                <div class="options">
+                    <div class="editText">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <a href="" onclick="editText()">EDIT TEXT</a>
+                    </div>
+                    <div class="favouritestab">
+                        <i class="fa-solid fa-star"></i>
+                        <a href="" class="fav1">FAVOURITES</a>
+                    </div>
+                    <div class="userNotes">
+                        <i class="fa-regular fa-note-sticky"></i>
+                        <a onclick="userNotes()" href="">USER NOTES</a>
+                    </div>
+                    <div class="viewCode">
+                        <i class="fa-solid fa-code"></i>
+                        <a onclick="viewCode()" href="">VIEW CODE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="unauth_tab">
+                    <div class="menu">
+                        <ol class="menu_ol">
+                          <li class="closed"><i class="fas fa-close close"></i></li>
+                          <li><a href="">Documentation</a></li>
+                          <li><a href="">Animation</a></li>
+                          <li><a href="">Download Library</a></li>
+                          <li><a href="">Log In</a></li>
+                          <li><a href="">Sign Up</a></li>
+                          <li><a href="">Home</a></li>
+                        </ol>
+                    </div>
+                    <div class="menu_bars">
+                      <i class="fas fa-bars "></i>
+                    </div>
+                    <div class="profile">
+                            <div>
+                                <button> Log In</button>
+                            </div>
+                            <div>
+                                <button>Sign Up</button>
+                            </div>
+                    </div>
+                </div>
+                <!--
+                  <div class="auth_tab">
+                    <div class="menu">
+                        <ol class="menu_ol">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Documentation</a></li>
+                            <li><a href="">Animation</a></li>
+                            <li><a href="">Download Library</a></li>
+                        </ol>
+                    </div>
+                    <div id="menu_bars">
+                      <i class="fas fa-bars fa-2x"></i>
+                    </div>
+                    <div class="profile">
+                        <div class="profile_icon">
+                            <a href=""><i class="fa-solid fa-user fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                -->
+                
+                <!-- <div class="animation_body">
+                  <div class="element_options">
+                    <label for="elements">CHOOSE ANIMATION OPTION:</label>
+                    <select name="elements" id="element_selector">
+                      <option name="text" value="text">Text <i class="fa-solid fa-font"></i></option>
+                      <option name="circle" value="circle">Circle <i class="fa-solid fa-circle"></i></option>
+                      <option name="square" value="square">Square <i class="fa-solid fa-square"></i></option>
+                    </select>
+                  </div>
+                  <div>
+                    <p class="element-animated etext" id="element">Anima95</p>
+                    <div class="element-animated circle" id="element" style="padding: 150px 150px; background-color: black; border-radius: 100%;"></div>
+                    <div class="element-animated square" id="element" style="padding: 150px 150px; background-color: black;"></div>
+                </div>
+                </div> -->
+                
+                <!-- to be removed once the select option starts working -->
+                  <div class="animation_body">
+                    <div class="element_options">
+                        <i class="fa-solid fa-font selected anime-option1"></i>
+                        <i class="fa-solid fa-circle anime-option2"></i>
+                        <i class="fa-solid fa-square anime-option3"></i>
+                    </div>
+                    <div>
+                        <p class="element-animated etext" id="element">Anima95</p>
+                        <div class="element-animated circle" id="element" style=" background-color: black; border-radius: 100%; "></div>
+                        <div class="element-animated square" id="element" style=" background-color: black; ;"></div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        
+        <script src="script.js">
+
+        </script>
+    </body>
+</html>
