@@ -4,25 +4,31 @@ let option1 = document.querySelector(".anime-option1");
 let option2 = document.querySelector(".anime-option2");
 let option3 = document.querySelector(".anime-option3");
 let menu = document.querySelector(".menu_bars");
-let close = document.querySelector(".close");
+let closed = document.querySelector(".close");
 var y = document.querySelector('.etext');
  var z = document.querySelector('.circle');
  var w = document.querySelector('.square');
+ let mainMenu = document.querySelector(".menu_ol");
+ let mainM = document.querySelector(".unauth_tab .menu");
 
 
 menu.addEventListener("click",showmenu)
-close.addEventListener("click",showmenu)
+closed.addEventListener("click",showmenu)
 option1.addEventListener("click",changeOption)
 option2.addEventListener("click",changeOption)
 option3.addEventListener("click",changeOption)
 
 
 function showmenu(){
-    if (mainNav.style.display == "none"){
-        mainNav.style.display = "block"
+    if (mainMenu.style.display == "none"){
+        mainMenu.style.display = "block"
     }
     else{
-        mainNav.style.display = "none"
+        mainMenu.style.display = "none"
+    }
+
+     if (mainM.style.display == "none"){
+        mainM.style.display = "block"
     }
 
 }

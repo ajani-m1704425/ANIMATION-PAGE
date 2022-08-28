@@ -99,19 +99,22 @@ li{
 /*Tab*/
 .auth_tab{
     display: flex;
-}
-.auth_tab .menu{
-    width: 70%;
+    justify-content: space-between;
     position: relative;
+}
+ .menu{
+    width: 70%;
+    
 }
 .menu ol{
     display: none;
     margin-left: 10%;
-    width: 250px;
+    width: 220px;
     position: absolute;
     background: #F6F5F7;
+    padding-left: 40px;
     top: 50px;
-    right: -40px;
+    right: 10px;
     z-index: 2;
     border-radius: 0px 0px 12px 12px;
 }
@@ -125,18 +128,20 @@ li{
     text-align: center;
     margin: auto;
     display: block;
+    padding-right: 40px;
     
 }
 .profile{
     display: flex;
-    align-self: center;
+    justify-content: space-between;
 }
 .unauth_tab{
     display: flex;
-}
-.unauth_tab .menu{
-    width: 70%;
+    justify-content: space-between;
     position: relative;
+}
+.menu{
+    width: 70%;
 }
 .menu_bars{
     align-self: center;
@@ -162,6 +167,113 @@ li{
     color: #FFFFFF;
     background-color: #3A0CA3;
 }
+
+
+.profile_container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.profile_main_container {
+    border-radius: 82.5136px;
+    background-color: #AF97DE;
+    margin-right: 6px;
+}
+
+.profile_displayname_abbr {
+    font-weight: 700;
+    font-size: 16.5027px;
+    line-height: 23px;
+    color: #FFFFFF;
+    padding: 5px 6px;
+}
+
+.profile_icon {
+    position: relative;
+    top: 8px;
+}
+
+.profile_dropdown_container {
+    width: 300px;
+    height: fit-content;
+    position: absolute;
+    right: -40px;
+    top: 35px;
+    display: none;
+
+}
+
+.top_part {
+    background: #D8C1FF;
+    height: 100px;
+    position: relative;
+    width: 100%;
+}
+
+.circle_closed {
+    position: absolute;
+    top: 13px;
+    right: 21px;
+}
+
+.user_profile {
+    position: relative;
+    top: 60px;
+}
+
+.profile_displayname {
+    margin: auto;
+    padding: 20px 18px;
+    border-radius: 100%;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 8px;
+    background: #432499;
+    width: fit-content;
+}
+
+.profile_fullname {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4F4D54;
+    margin-bottom: 2px;
+}
+
+.profile_email {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #716E7A;
+}
+
+.profile_nav {
+    height: 220px;
+    width: 100%;
+    padding-top: 155px;
+    background-color: white;
+}
+
+.profile_item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2F2D33;
+    margin-bottom: 16px;
+    margin-left: 24px;
+}
+
+.profile_items_icon {
+    margin-right: 16px;
+    position: relative;
+    top: 4px;
+}
+
+
 /*Animation_body*/
 .element_options{
     position: absolute;
@@ -232,22 +344,26 @@ li{
 
 @media only screen and (min-width: 700px){
     .panel {
-            width: 30%;
+            width: 35%;
     
         }
     .logo{
         height: 80px;
     }
     .logo img{
-        height: 37px;
+        width: 100px;
+        height: 60px;
+        margin: auto;
+        display: block;
+        margin-top: 10px;
     }
 .animation_options {
     padding: 14px 0;
     
     padding-left: 24px;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    
 
 }
 
@@ -262,8 +378,8 @@ li{
 .options {
     padding-top: 16px;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .options div {
@@ -275,7 +391,7 @@ li{
     padding-left: 12px;
 }
 .body {
-    width: 70%;
+    width: 65%;
 }
 
 /*Tab*/
@@ -283,19 +399,19 @@ li{
     display: flex;
 }
 
-.auth_tab .menu {
+.menu {
     width: 70%;
-    position: relative;
+
 }
 
 .menu ol {
     display: none;
-    margin-left: 10%;
+    margin-left: 0px;
     width: 250px;
     position: absolute;
     background: #F6F5F7;
-    top: 50px;
-    right: -40px;
+    top: 12px;
+    left: -50px;
     z-index: 2;
     border-radius: 0px 0px 12px 12px;
 }
@@ -316,22 +432,26 @@ li{
 .profile {
     display: flex;
     align-self: center;
+    width: 45%;
 }
 
 .unauth_tab {
     display: flex;
     justify-content: space-between;
+    padding: 16px 40px;
+    align-items: center;
 }
 
-.unauth_tab .menu {
+ .menu {
     width: 70%;
-    position: relative;
+    position: absolute;
 }
 
 .menu_bars {
+    width: 10%;
     align-self: center;
     padding-right: 37px;
-    padding-top: 24px;
+    padding-top: 0px;
     font-size: 20px;
 
 }
@@ -339,16 +459,13 @@ li{
 .profile button {
     padding: 10px;
     margin: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3A0CA3;
     border: #3A0CA3 1px solid;
     cursor: pointer;
     display: block;
-    
-}
-
-.profile button:hover {
-    border: none;
-    color: #FFFFFF;
-    background-color: #3A0CA3;
 }
 
 .profile button:active {
@@ -359,23 +476,22 @@ li{
 
 /*Animation_body*/
 .element_options {
-    position: absolute;
-    /* margin-top: 50px;
-    margin-left: 59px; */
+    position: static;
+    margin-top: 0px;
+    margin-left: 40px;
     display: flex;
-    right: 25px;
 
 }
 
 .element_options i {
     cursor: pointer;
-    padding: 10px;
+    padding: 12px;
     background-color: #E8E6EB;
     width: 20px;
     height: 20px;
     color: #8C8A94;
-    padding-right: 6px;
-    padding-bottom: 6px;
+    padding-right: 8px;
+    padding-bottom: 8px;
 }
 
 .element_options i.selected {
@@ -387,7 +503,7 @@ li{
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-top: 50px;
+    margin-top: 14px;
 }
 
 .anime-option1 {
@@ -401,36 +517,272 @@ li{
 }
 
 .animation_body div p {
-    padding-top: 156px;
+    margin-top: 240px;
     text-align: center;
     font-weight: 700;
-    font-size: 31.7647px;
-    line-height: 36px;
+    font-size: 56px;
+    line-height: 72px;
 }
 
 .circle#element {
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 160px;
     margin: auto;
-    margin-top: 144px;
+    margin-top: 240px;
     display: none;
 }
 
 .square#element {
     margin: auto;
-    width: 80px;
-    height: 80px;
-    margin-top: 144px;
+    width: 160px;
+    height: 160px;
+    margin-top: 240px;
     display: none;
 }
 
 }
 
 
+@media only screen and (min-width: 901px) {
+   
+        .profile{
+            width: 35%;
+        }
+}
 
 
 
 
+
+
+@media only screen and (min-width: 1025px) {
+    .panel {
+            width: 23%;
+    
+        }
+    
+        .logo {
+                height: 94px;
+        }
+    
+        .logo img {
+            width: 124px;
+            height: 65px;
+            margin: auto;
+            display: block;
+            margin-top: 10px;
+        }
+    
+        .animation_options {
+            padding: 16px 0;
+    
+            padding-left: 24px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+    
+        }
+    
+        .animation_options div {
+            padding: 16px 0px;
+            /* padding-left: 14px; */
+        }
+    
+        .animation_options div span #icon {
+            padding-right: 12px;
+        }
+    
+        .options {
+            padding-top: 16px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    
+        .options div {
+            padding: 12px 0px;
+            margin-left: 24px;
+        }
+    
+        .options div a {
+            padding-left: 12px;
+        }
+
+                .body {
+                    width: 77%;
+                }
+        
+                /*Tab*/
+                .auth_tab {
+                    display: flex;
+                    padding: 16px 40px;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+        
+             
+        
+                .menu ol {
+                    display: flex;
+                    margin-left: 0px;
+                    width: 100%;
+                    padding-left: 0;
+                    position: static;
+                    background: inherit;
+                    z-index: 2;
+                    align-items: center;
+
+                }
+        
+                .menu ol li {
+                    cursor: pointer;
+                    font-weight: 700;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: #716E7A;
+                        padding: 20px 0px;
+                        margin-right: 25px;
+                  
+                }
+                .menu ol li:last-child{
+                    margin-right: 0px;
+                }
+                .menu ol li a{
+                    color: #716E7A;
+                }
+                .to-be-rem{
+                    display: none;
+                }
+                .menu ol li.present-page a {
+                    color: #312121;
+                }
+        
+                .close {
+                    font-size: 20px;
+                    text-align: center;
+                    margin: auto;
+                    display: none;
+        
+                }
+                .closed{
+                    display: none;
+                }
+        
+                .profile {
+                    display: flex;
+                    align-self: center;
+                    justify-content: space-between;
+                    width: 24%;
+                }
+        
+                .unauth_tab {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 16px 40px;
+                    align-items: center;
+                }
+        
+                .menu {
+                    width: 70%;
+                    position: static;
+                }
+        
+                .menu_bars {
+                    width: 10%;
+                    align-self: center;
+                    padding-right: 37px;
+                    padding-top: 0px;
+                    font-size: 20px;
+                    display: none;
+        
+                }
+        
+                .profile button {
+                    padding: 10px;
+                    margin: 5px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #3A0CA3;
+                    border: #3A0CA3 1px solid;
+                    cursor: pointer;
+                    display: block;
+                }
+        
+                .profile button:active {
+                    border: none;
+                    color: #FFFFFF;
+                    background-color: #3A0CA3;
+                }
+        
+                /*Animation_body*/
+                .element_options {
+                    position: static;
+                    margin-top: 0px;
+                    margin-left: 50px;
+                    display: flex;
+        
+                }
+        
+                .element_options i {
+                    cursor: pointer;
+                    padding: 12px;
+                    background-color: #E8E6EB;
+                    width: 20px;
+                    height: 20px;
+                    color: #8C8A94;
+                    padding-right: 8px;
+                    padding-bottom: 8px;
+                }
+        
+                .element_options i.selected {
+                    background: #FFFFFF;
+                    color: black;
+                }
+        
+                .animation_body {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    margin-top: 14px;
+                }
+        
+                .anime-option1 {
+                    border-top-left-radius: 6px;
+                    border-bottom-left-radius: 6px;
+                }
+        
+                .anime-option3 {
+                    border-bottom-right-radius: 6px;
+                    border-top-right-radius: 6px;
+                }
+        
+                .animation_body div p {
+                    margin-top: 190px;
+                    text-align: center;
+                    font-weight: 700;
+                        font-size: 96px;
+                        line-height: 72px;
+                }
+        
+                .circle#element {
+                    width: 209px;
+                    height: 209px;
+                    margin: auto;
+                    margin-top: 190px;
+                    display: none;
+                }
+        
+                .square#element {
+                    margin: auto;
+                    width: 209px;
+                    height: 209px;
+                    margin-top: 190px;
+                    display: none;
+                }
+        
+                
+}
 
 
 
