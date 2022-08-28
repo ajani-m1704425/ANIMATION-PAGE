@@ -2,6 +2,9 @@
 *{
     margin: 0px;
 }
+body{
+    height: 100vh;
+}
 .container{
     font-family: 'Poppins', sans-serif;
     display: flex;
