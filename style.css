@@ -393,7 +393,7 @@ li{
 }
 .body {
     width: 65%;
-    height: 100%;
+    height: inherit;
 }
 
 /*Tab*/
