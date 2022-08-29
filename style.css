@@ -313,7 +313,7 @@ li{
     border-top-right-radius:6px ;
 }
 .animation_body div p{
-    padding-top: 156px;
+    padding-top: 200px;
     text-align: center;
     font-weight: 700;
     font-size: 31.7647px;
@@ -323,14 +323,14 @@ li{
     width: 80px;
     height: 80px;
     margin: auto;
-    margin-top: 144px;
+    margin-top: 200px;
     display: none;
 }
 .square#element {
     margin: auto;
     width: 80px;
     height: 80px;
-    margin-top: 144px;
+    margin-top: 200px;
     display: none;
 }
 
