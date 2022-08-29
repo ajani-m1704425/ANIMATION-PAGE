@@ -2,9 +2,7 @@
 *{
     margin: 0px;
 }
-body{
-    height: 100vh;
-}
+
 .container{
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -28,7 +26,7 @@ li{
     width: 45%;
     /* width: 174px; */
     background-color: #FFFFFF;
-   height: 100%;
+   height: 100vh;
 /* height: 844px; */
    overflow-y: scroll;
    overflow-x: hidden;
@@ -97,7 +95,7 @@ li{
 .body{
     width: 55%;
     background-color: #DEDEDE;
-    height: inherit;
+    height: 100vh;
 }
 /*Tab*/
 .auth_tab{
@@ -348,7 +346,7 @@ li{
 @media only screen and (min-width: 700px){
     .panel {
             width: 35%;
-    
+        height: 100%;
         }
     .logo{
         height: 80px;
@@ -395,6 +393,7 @@ li{
 }
 .body {
     width: 65%;
+    height: 100%;
 }
 
 /*Tab*/
