@@ -547,9 +547,196 @@ li{
 
 @media only screen and (min-width: 901px) {
    
-        .profile{
-            width: 35%;
-        }
+      
+                 .panel {
+                     width: 22%;
+        
+                 }
+        
+                 .logo {
+                     height: 94px;
+                 }
+        
+                 .logo img {
+                     width: 124px;
+                     height: 65px;
+                     margin: auto;
+                     display: block;
+                     margin-top: 10px;
+                 }
+        
+                 .animation_options {
+                     padding: 16px 0;
+        
+                     padding-left: 24px;
+                     font-weight: 700;
+                     font-size: 14px;
+                     line-height: 20px;
+        
+                 }
+        
+                 .animation_options div {
+                     padding: 16px 0px;
+                     /* padding-left: 14px; */
+                 }
+        
+                 .animation_options div span #icon {
+                     padding-right: 12px;
+                 }
+        
+                 .options {
+                     padding-top: 16px;
+                     font-weight: 700;
+                     font-size: 14px;
+                     line-height: 20px;
+                 }
+        
+                 .options div {
+                     padding: 12px 0px;
+                     margin-left: 24px;
+                 }
+        
+                 .options div a {
+                     padding-left: 12px;
+                 }
+        
+                 .body {
+                     width: 78%;
+                 }
+        
+                 /*Tab*/
+                 .auth_tab {
+                     display: flex;
+                     padding: 16px 40px;
+                     align-items: center;
+                     justify-content: space-between;
+                 }
+        
+        
+        
+                 .menu ol {
+                     display: flex;
+                     margin-left: 0px;
+                     width: 100%;
+                     padding-left: 0;
+                     position: static;
+                     background: inherit;
+                     z-index: 2;
+                     align-items: center;
+        
+                 }
+        
+                 .menu ol li {
+                     cursor: pointer;
+                     font-weight: 700;
+                     font-size: 15px;
+                     line-height: 22px;
+                     color: #716E7A;
+                     padding: 20px 0px;
+                     margin-right: 18px;
+        
+                 }
+        
+                 .menu ol li:last-child {
+                     margin-right: 0px;
+                 }
+        
+                 .menu ol li a {
+                     color: #716E7A;
+                 }
+        
+                 .to-be-rem {
+                     display: none;
+                 }
+        
+                 .menu ol li.present-page a {
+                     color: #312121;
+                 }
+        
+                 .close {
+                     font-size: 20px;
+                     text-align: center;
+                     margin: auto;
+                     display: none;
+        
+                 }
+        
+                 .closed {
+                     display: none;
+                 }
+        
+                 .profile {
+                     display: flex;
+                     align-self: center;
+                     justify-content: space-between;
+                     width: 25%;
+                 }
+        
+                 .unauth_tab {
+                     display: flex;
+                     justify-content: space-between;
+                     padding: 16px 40px;
+                     align-items: center;
+                 }
+        
+                 .menu {
+                     width: 72%;
+                     position: static;
+                 }
+        
+                 .menu_bars {
+                     width: 10%;
+                     align-self: center;
+                     padding-right: 37px;
+                     padding-top: 0px;
+                     font-size: 20px;
+                     display: none;
+        
+                 }
+        
+                 .profile button {
+                     padding: 10px;
+                     margin: 0px;
+                     font-weight: 400;
+                     font-size: 15px;
+                     line-height: 22px;
+                     color: #3A0CA3;
+                     border: #3A0CA3 1px solid;
+                     cursor: pointer;
+                     display: block;
+                 }
+        
+                 .profile button:active {
+                     border: none;
+                     color: #FFFFFF;
+                     background-color: #3A0CA3;
+                 }
+
+
+
+                                 .animation_body div p {
+                                     margin-top: 200px;
+                                     text-align: center;
+                                     font-weight: 700;
+                                     font-size: 56px;
+                                     line-height: 72px;
+                                 }
+                
+                                 .circle#element {
+                                     width: 160px;
+                                     height: 160px;
+                                     margin: auto;
+                                     margin-top: 190px;
+                                     display: none;
+                                 }
+                
+                                 .square#element {
+                                     margin: auto;
+                                     width: 160px;
+                                     height: 160px;
+                                     margin-top: 190px;
+                                     display: none;
+                                 }
 }
 
 
@@ -627,6 +814,7 @@ li{
                 .menu ol {
                     display: flex;
                     margin-left: 0px;
+                    justify-content: space-between;
                     width: 100%;
                     padding-left: 0;
                     position: static;
@@ -643,7 +831,7 @@ li{
                         line-height: 22px;
                         color: #716E7A;
                         padding: 20px 0px;
-                        margin-right: 25px;
+                        /* margin-right: 25px; */
                   
                 }
                 .menu ol li:last-child{
@@ -685,7 +873,7 @@ li{
                 }
         
                 .menu {
-                    width: 70%;
+                    width: 66%;
                     position: static;
                 }
         
@@ -760,7 +948,8 @@ li{
                 }
         
                 .animation_body div p {
-                    margin-top: 190px;
+                    margin-top: 220px;
+                    padding-top: 0%;
                     text-align: center;
                     font-weight: 700;
                         font-size: 96px;
