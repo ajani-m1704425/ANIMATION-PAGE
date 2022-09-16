@@ -21,55 +21,64 @@
 
                 <div class="animation_options">
                     <div class="upOption">
-                        <span >
-                            <i class="fa-regular fa-star" id="icon"></i>
-                        </span>
+                          <span class="stars" onclick="changeStars(this)">
+                              <span class="fa fa-star golden"></span>
+                              <i class="fa-regular fa-star" id="icon"></i>
+                          </span>                           
                         <span  onclick="moveUp()">MOVE_UP</span>    
                     </div>
                     <div class="downOption">
-                        <span >
+                        <span class="stars" onclick="changeStars(this)">
+                          <span class="fa fa-star golden"></span>
                             <i class="fa-regular fa-star" id="icon"></i>
                         </span>
                         <span  onclick="moveDown()">MOVE_DOWN</span>    
                     </div>
                     <div class="leftOption">
-                        <span >
+                        <span class="stars" onclick="changeStars(this)">
+                          <span class="fa fa-star golden"></span>
                             <i class="fa-regular fa-star" id="icon"></i>
                         </span>
                         <span  onclick="moveLeft()">MOVE_LEFT</span>    
                     </div>
                     <div class="rightOption">
-                        <span >
+                        <span class="stars" onclick="changeStars(this)">
+                          <span class="fa fa-star golden"></span>
                             <i class="fa-regular fa-star" id="icon"></i>
                         </span>
                         <span  onclick="moveRight()">APPEAR_FROM_RIGHT</span>    
                     </div>
                     <div class="bounceOption">
-                        <span >
+                        <span class="stars" onclick="changeStars(this)">
+                          <span class="fa fa-star golden"></span>
                             <i class="fa-regular fa-star" id="icon"></i>
                         </span>
                         <span  onclick="bounce()">BOUNCE</span>    
                     </div>
                     <div class="rotateOption">
-                        <span >
+                        <span class="stars" onclick="changeStars(this)">
+                          <span class="fa fa-star golden"></span>
                             <i class="fa-regular fa-star" id="icon"></i>
                         </span>
                         <span  onclick="rotate()">ROTATE</span>    
                     </div>
                     <div class="blinkOption">
-                        <span >
+                        <span class="stars" onclick="changeStars(this)">
+                          <span class="fa fa-star golden"></span>
                             <i class="fa-regular fa-star" id="icon"></i>
                         </span>
                         <span  onclick="blink()">BLINK</span>    
                     </div>
                     <div class="trembleOption">
-                        <span >
+                        <span class="stars" onclick="changeStars(this)">
+                          <span class="fa fa-star golden"></span>
                             <i class="fa-regular fa-star" id="icon"></i>
                         </span>
                         <span onclick="tremble()">TREMBLE</span>    
                     </div>
                     <div class="fadeOption">
-                        <span >
+                        <span class="stars" onclick="changeStars(this)">
+                          <span class="fa fa-star golden"></span>
                             <i class="fa-regular fa-star" id="icon"></i>
                         </span>
                         <span  onclick="fade()">FADE</span>    
@@ -79,19 +88,19 @@
                 <div class="options">
                     <div class="editText">
                         <i class="fa-regular fa-pen-to-square"></i>
-                        <a href="" onclick="editText()">EDIT TEXT</a>
+                       <span>EDIT TEXT</span>
                     </div>
                     <div class="favouritestab">
                         <i class="fa-solid fa-star"></i>
-                        <a href="" class="fav1">FAVOURITES</a>
+                        <span class="fav1">FAVOURITES</span>
                     </div>
                     <div class="userNotes">
                         <i class="fa-regular fa-note-sticky"></i>
-                        <a onclick="userNotes()" href="">USER NOTES</a>
+                        <span>USER NOTES</span>
                     </div>
                     <div class="viewCode">
                         <i class="fa-solid fa-code"></i>
-                        <a onclick="viewCode()" href="">VIEW CODE</a>
+                        <span>VIEW CODE</span>
                     </div>
                 </div>
             </div>
@@ -109,7 +118,7 @@
                           
                         </ol>
                     </div>
-                    <div class="menu_bars">
+                    <div id="menu_bars" class="menu_bars">
                       <i class="fas fa-bars "></i>
                     </div>
                     <div class="profile">
@@ -121,18 +130,19 @@
                             </div>
                     </div>
                 </div>
-                <!--
-                  <div class="auth_tab">
-                    <div class="menu">
+                
+                <div class="auth_tab">
+                    <div id="menu" class="menu_auth">
                         <ol class="menu_ol">
+                            <li class="closed"><i class="fas fa-close close"></i></li>
                             <li><a href="">Home</a></li>
                             <li><a href="">Documentation</a></li>
-                            <li><a href="">Animation</a></li>
+                            <li class="present-page"><a href="">Animation</a></li>
                             <li><a href="">Download Library</a></li>
                         </ol>
                     </div>
-                    <div id="menu_bars">
-                      <i class="fas fa-bars fa-2x"></i>
+                    <div id="menu_bars" class="menu_bars" style="padding-top: 4px;">
+                      <i class="fas fa-bars "></i>
                     </div>
                   <div class="profile_container">
                     <div class="profile_main_container">
@@ -158,7 +168,7 @@
                     </div>
                   </div>
                 </div>
-                -->
+               
                 
                 
                 <!-- <div class="animation_body">
@@ -192,6 +202,155 @@
                 </div>
                
             </div>
+        </div>
+
+        
+        
+        <div class="favouriteOverlay">
+          <section class="favouritecard">
+            <div class="searchbar">
+              <div class="searchinput">
+                <span class="iconify bxsearch" data-icon="bx:search"></span>
+                <input type="search" name="search" id="search" placeholder="search" />
+              </div>
+              <span class="iconify bxfilter" data-icon="bx:filter"></span>
+            </div>
+            <div class="move moveup">
+              <div class="direction">Move_Up</div>
+              <div class="icon">
+                <span class="iconify" data-icon="bx:edit-alt"></span>
+                <span class="iconify" data-icon="ri:delete-bin-line"></span>
+              </div>
+            </div>
+            <div class="move movedown">
+              <div class="direction">Move_Down</div>
+              <div class="icon">
+                <span class="iconify" data-icon="bx:edit-alt"></span>
+                <span class="iconify" data-icon="ri:delete-bin-line"></span>
+              </div>
+            </div>
+            <div class="move moveleft">
+              <div class="direction">Move_Left</div>
+              <div class="icon">
+                <span class="iconify" data-icon="bx:edit-alt"></span>
+                <span class="iconify" data-icon="ri:delete-bin-line"></span>
+              </div>
+            </div>
+            <div class="move moveblink">
+              <div class="direction">Blink</div>
+              <div class="icon">
+                <span class="iconify" data-icon="bx:edit-alt"></span>
+                <span class="iconify" data-icon="ri:delete-bin-line"></span>
+              </div>
+            </div>
+            <div class="move movebounce">
+              <div class="direction">Bounce</div>
+              <div class="icon">
+                <span class="iconify" data-icon="bx:edit-alt"></span>
+                <span class="iconify" data-icon="ri:delete-bin-line"></span>
+              </div>
+            </div>
+            <div class="move movefade">
+              <div class="direction">Fade</div>
+              <div class="icon">
+                <span class="iconify" data-icon="bx:edit-alt"></span>
+                <span class="iconify" data-icon="ri:delete-bin-line"></span>
+              </div>
+            </div>
+          </section>
+        </div>
+        
+        
+        
+        <div id="userNoteOverlay">
+          <section class="note">
+            <div class="headed">
+              <span class="iconify find" data-icon="bi:search"></span>
+              <input type="search" name="search" id="search" placeholder="Search" />
+              <span class="iconify arrow" data-icon="gridicons:dropdown" onclick="toggleText()"></span>
+            </div>
+            <hr class="line" />
+            <div class="add">
+                <p class="add_note">
+                  <span class="iconify plus" data-icon="bx:plus-circle"></span>
+                 Add Note
+                </p>
+            </div>
+            
+          </section>
+          <section id="notes">
+            <div class="messages">
+              <div class="colortime">
+                <div class="notecolor">
+                  <i id="pinshow" class="iconify pin" data-icon="entypo:pin"></i>
+                </div>
+                
+                <p class="time">02:00pm</p>
+              </div>
+              <div class="essay">
+                <h4 class="hessay">Ways To Adapt Move-Up</h4>
+                <p class="pessay">
+                  It is a long established fact that a reader will be distracted by
+                  the readable content ...
+                </p><br>
+                <p class="publish">3 weeks ago</p>
+              </div>
+              <div class="threedot">
+                <span class="iconify main-threedot" data-icon="bi:three-dots"></span>
+                <div class="dropdown">
+                  <a class="edit-note" href="#">Edit Note</a>
+                  <a class="pin-note" href="#">Pin Note</a>
+                  <a class="unpin" href="#">Unpin Note</a>
+                  <a class="deletee" href="#">Delete Note</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="editNoteOverlay">
+          <section class="edit">
+            <div class="head">
+              <div class="head1">
+                <div class="change"></div>
+                <select name="color" id="color" onchange="colorbg(this)">
+                  <option value="#ffcccc" class="one opt"></option>
+                  <option value="#866ac4" class="two opt" selected></option>
+                  <option value="#3a0ca3" class="three opt"></option>
+                  <option value="#00f8a9" class="four opt"></option>
+                  <option value="#00574e" class="five opt"></option>
+                </select>
+              </div>
+              <div class="stroke">|</div>
+              <div class="head2">
+                <span class="iconify bullet" data-icon="fluent:text-bullet-list-ltr-24-filled"></span>
+              </div>
+              <div class="stroke str1">|</div>
+              <div class="head3">
+                <span class="iconify pinn" data-icon="entypo:pin"></span>
+              </div>
+              <div class="stroke str2">|</div>
+              <div class="head4">
+                <span class="iconify submit" data-icon="bi:arrow-down-circle-fill"></span>
+              </div>
+              <div class="stroke str3">|</div>
+              <div class="head5">
+                <span class="iconify deleted" data-icon="fluent:delete-24-regular"></span>
+              </div>
+            </div>
+            <textarea name="addtext" id="addtext" cols="20" rows="30" class="text"></textarea>
+          </section>
+        </div>
+
+        <div class="view-codeLayer">
+          <img src="./images/close-circle.png" alt="" class="codeView-cancel">
+          <h3 class="code-title">Title goes here</h3>
+          <div class="codeview-code-container">
+            <p class="codeview-code">
+              &lt; link rel=&quot;stylesheet&quot; href=&quot;animate.css&quot;&gt;
+            </p>
+          </div>
+          <button class="code-copy">Copy Code</button>
         </div>
         
         <script src="script.js">
