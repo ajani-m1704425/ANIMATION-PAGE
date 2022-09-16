@@ -69,6 +69,7 @@ li{
 .animation_options div{
     padding: 10px 0px;
     padding-left: 5px;
+    cursor: pointer;
 }
 .animation_options div:hover{
     background: #D5D2D9;
@@ -106,6 +107,7 @@ opacity: 100%;
 .options div{
     padding: 10px 0px;
     margin-left: 30px;
+    cursor: pointer;
 }
 
 .options div a{
@@ -175,6 +177,7 @@ opacity: 100%;
     padding-right: 37px;
     padding-top: 24px;
     font-size: 20px;
+    cursor: pointer;
     
 }
 .profile button{
@@ -206,6 +209,7 @@ opacity: 100%;
     border-radius: 82.5136px;
     background-color: #AF97DE;
     margin-right: 6px;
+    cursor: pointer;
 }
 
 .profile_displayname_abbr {
@@ -219,6 +223,7 @@ opacity: 100%;
 .profile_icon {
     position: relative;
     top: 8px;
+    cursor: pointer;
 }
 
 .profile_dropdown_container {
@@ -243,6 +248,7 @@ opacity: 100%;
     position: absolute;
     top: 13px;
     right: 21px;
+    cursor: pointer;
 }
 
 .user_profile {
@@ -294,6 +300,7 @@ opacity: 100%;
     color: #2F2D33;
     margin-bottom: 16px;
     margin-left: 24px;
+    cursor: pointer;
 }
 
 .profile_items_icon {
@@ -403,6 +410,7 @@ opacity: 100%;
 #color {
     background-color: #2f2d33;
     color: #f6f5f7;
+    cursor: pointer;
 }
 
 .change {
@@ -421,18 +429,23 @@ select#color{
 }
 .one {
     background-color: #ffcccc;
+    cursor: pointer;
 }
 .two {
     background-color: #866ac4;
+    cursor: pointer;
 }
 .three {
     background-color: #3a0ca3;
+    cursor: pointer;
 }
 .four {
     background-color: #00f8a9;
+    cursor: pointer;
 }
 .five {
     background-color: #00574e;
+    cursor: pointer;
 }
 .stroke {
  
@@ -722,6 +735,7 @@ input:focus {
     padding: 5px 2px;
     padding-bottom: 14px;
     margin-bottom: 15px;
+    cursor: pointer;
 
 
 }
@@ -848,6 +862,7 @@ input:focus {
     flex-grow: 0;
     position: relative;
     text-align: center;
+    
 
 }
 
@@ -855,6 +870,7 @@ input:focus {
     background-color: #4F4D54;
     color: #fff;
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .dropdown {
@@ -878,6 +894,7 @@ input:focus {
     line-height: 13px;
     color: #fff;
     border-bottom: solid 1px #fff;
+    cursor: pointer;
 }
 .unpin{
     display: none;
@@ -938,6 +955,7 @@ input:focus {
     height: 24px;
     margin-left: 90%;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 .code-copy{
 margin-top: 28px;
@@ -952,6 +970,7 @@ font-family: 'Space Grotesk';
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
+    cursor: pointer;
 }
 
 

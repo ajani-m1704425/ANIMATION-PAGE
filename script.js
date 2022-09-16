@@ -80,11 +80,11 @@ unpin.addEventListener('click', unpinned);
 
 
 function showmenu(){
-    if (mainMenu.style.display == "none"){
-        mainMenu.style.display = "block"
+    if (mainMenu.style.display == "block"){
+        mainMenu.style.display = "none"
     }
     else{
-        mainMenu.style.display = "none"
+        mainMenu.style.display = "block"
     }
 
      if (mainM.style.display == "none"){
@@ -97,11 +97,11 @@ function showmenu(){
 }
 
 function showdropdown(){
-     if (dropdown.style.display == "none"){
-        dropdown.style.display = "block"
+     if (dropdown.style.display == "block"){
+        dropdown.style.display = "none"
     }
     else{
-        dropdown.style.display = "none"
+        dropdown.style.display = "block"
     }
 }
 
@@ -134,35 +134,37 @@ function changeOption(){
 }
 
 function showFavourLayer(){
-    if (favouriteOverlay.style.display == "none"){
+    if (favouriteOverlay.style.display == "block"){
+        favouriteOverlay.style.display = "none"
+        
+    }
+    else{
         favouriteOverlay.style.display = "block"
          userNoteOverlay.style.display = "none"
          view_codeLayer.style.display = "none"
-    }
-    else{
-        favouriteOverlay.style.display = "none"
     }
 }
 
 
 function showUserNoteLayer(){
-    if (userNoteOverlay.style.display == "none"){
-        userNoteOverlay.style.display = "block"
-        favouriteOverlay.style.display = "none"
-        view_codeLayer.style.display = "none"
+    if (userNoteOverlay.style.display == "block"){
+       userNoteOverlay.style.display = "none"
     }
     else{
-        userNoteOverlay.style.display = "none"
+        
+         userNoteOverlay.style.display = "block"
+        favouriteOverlay.style.display = "none"
+        view_codeLayer.style.display = "none"
     }
 }
 
 
 function showEditTextLayer(){
-    if (editNoteOverlay.style.display == "none"){
-        editNoteOverlay.style.display = "block"
+    if (editNoteOverlay.style.display == "block"){
+       editNoteOverlay.style.display = "none"
     }
     else{
-        editNoteOverlay.style.display = "none"
+         editNoteOverlay.style.display = "block"
     }
 }
 
@@ -179,6 +181,7 @@ function showViewCodetLayer(){
     }
 }
 
+
 function pinned(){   
     pin_note.style.display = "none";
     unpin.style.display="block";
@@ -193,33 +196,18 @@ function unpinned(){
     document.querySelector('#pinshow').style.display = "none";
 }
 
-// console.log(normal_star);
-// console.log(golden_star);
 
 
-// for(count=0;count<normal_star.length;count++){
-//     let isElementClick = false;
-//     console.log(normal_star[count].style.display); 
-//     console.log(golden_star[count].style.display);
-//     normal_star[count].addEventListener('click', changeElementClick = () => {
-//         isElementClick = true;        
-//     })
-//     if(isElementClick == true){
-//         console.log(isElementClick)
-//         normal_star[count].style.display = "none";
-//         golden_star[count].style.display = "inline";
-//     }
-// }
-
-
-// function changeStarGolden(){
-//    golden_star.style.display = "inline";
-// normal_star.style.display = "none";
-// }
-// function changeStarNormal(){
-//    golden_star.style.display = "none";
-//    normal_star.style.display = "inline";
-// }
+function changeStars(thise){
+    if(thise.children[1].style.display == "none"){
+        thise.children[1].style.display = "inline"
+        thise.children[0].style.display = "none"
+    }
+    else{
+        thise.children[1].style.display = "none"
+        thise.children[0].style.display = "inline"
+    }
+}
 
 
 
@@ -329,13 +317,3 @@ function colorbg(event){
 
 
 //Element options experiment
-function changeStars(thise){
-    if(thise.children[1].style.display == "none"){
-        thise.children[1].style.display = "inline"
-        thise.children[0].style.display = "none"
-    }
-    else{
-        thise.children[1].style.display = "none"
-        thise.children[0].style.display = "inline"
-    }
-}
