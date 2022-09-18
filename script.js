@@ -317,3 +317,7 @@ function colorbg(event){
 
 
 //Element options experiment
+if(document.querySelector("body").offsetHeight < screen.height){
+    panel.style.height = "100vh"
+    bodyClass.style.height = "100vh"
+}
