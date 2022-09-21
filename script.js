@@ -201,63 +201,127 @@ document
 // ('click', () => document.querySelector('.profileOverlay').classList.toggle('profileShow'));
 
 function moveDown() {
-  var element = document.getElementById("element");
-  if(element.classList.contains("move_down")){
-    element.classList.remove("move_down");
+  var element = document.getElementsByClassName("element");
+  for(i=0;i<element.length;i++){
+    if(element[i].classList.contains("move_down")){
+      element[i].classList.remove("move_down");
+    }
+    else{
+    element[i].classList.add("move_down");
+    }
+    element[i].classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","tremble","rotate");
   }
-  else{
-  element.classList.add("move_down");
-  }
-  element.classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","tremble","rotate");
 }
 
 function moveUp() {
-  var element = document.getElementById("element");
-  element.classList.add("move_up");
-  element.classList.remove("move_down","move_left","appear-from-right","bounce","fade","blink","tremble","rotate");
+  var element = document.getElementsByClassName("element");
+  for(i=0;i<element.length;i++){
+    if(element[i].classList.contains("move_up")){
+      element[i].classList.remove("move_up");
+    }
+    else{
+    element[i].classList.add("move_up");
+    }
+    element[i].classList.remove("move_down","move_left","appear-from-right","bounce","fade","blink","tremble","rotate");
+}
 }
 
 function moveLeft() {
-  var element = document.getElementById("element");
-  element.classList.add("move_left");
-  element.classList.remove("move_up","move_down","appear-from-right","bounce","fade","blink","tremble","rotate");
+  var element = document.getElementsByClassName("element");
+  for(i=0;i<element.length;i++){
+    if(element[i].classList.contains("move_left")){
+      element[i].classList.remove("move_left");
+    }
+    else{
+    element[i].classList.add("move_left");
+    }
+    
+    element[i].classList.remove("move_up","move_down","appear-from-right","bounce","fade","blink","tremble","rotate");
+}
 }
 
 function moveRight() {
-  var element = document.getElementById("element");
-  element.classList.remove("move_up","move_left","move_down","bounce","fade","blink","tremble","rotate");
-  element.classList.add("appear-from-right");
+  var element = document.getElementsByClassName("element");
+  for(i=0;i<element.length;i++){
+    if(element[i].classList.contains("appear-from-right")){
+      element[i].classList.remove("appear-from-right");
+    }
+    else{
+    element[i].classList.add("appear-from-right");
+    }
+    element[i].classList.remove("move_up","move_left","move_down","bounce","fade","blink","tremble","rotate");
+}
+  
   
 }
 
 function bounce() {
-  var element = document.getElementById("element");
-  element.classList.add("bounce");
-  element.classList.remove("move_up","move_left","appear-from-right","move_down","fade","blink","tremble","rotate");
+  var element = document.getElementsByClassName("element");
+  for(i=0;i<element.length;i++){
+    if(element[i].classList.contains("bounce")){
+      element[i].classList.remove("bounce");
+    }
+    else{
+    element[i].classList.add("bounce");
+    }
+    element[i].classList.remove("move_up","move_left","appear-from-right","move_down","fade","blink","tremble","rotate");
+}
 }
 
 function fade() {
-  var element = document.getElementById("element");
-  element.classList.add("fade");
-  element.classList.remove("move_up","move_left","appear-from-right","bounce","move_down","blink","tremble","rotate");
+  var element = document.getElementsByClassName("element");
+  for(i=0;i<element.length;i++){
+    if(element[i].classList.contains("fade")){
+      element[i].classList.remove("fade");
+    }
+    else{
+    element[i].classList.add("fade");
+    }
+    
+    element[i].classList.remove("move_up","move_left","appear-from-right","bounce","move_down","blink","tremble","rotate");
+}
 }
 
 function blink() {
-  var element = document.getElementById("element");
-  element.classList.add("blink");
-  element.classList.remove("move_up","move_left","appear-from-right","bounce","fade","move_down","tremble","rotate");
+  var element = document.getElementsByClassName("element");
+  for(i=0;i<element.length;i++){
+    if(element[i].classList.contains("blink")){
+      element[i].classList.remove("blink");
+    }
+    else{
+    element[i].classList.add("blink");
+    }
+    
+    element[i].classList.remove("move_up","move_left","appear-from-right","bounce","fade","move_down","tremble","rotate");
+  }
 }
 
 function tremble() {
-  var element = document.getElementById("element");
-  element.classList.add("tremble");
-  element.classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","move_down","rotate");
+  var element = document.getElementsByClassName("element");
+  for(i=0;i<element.length;i++){
+    if(element[i].classList.contains("tremble")){
+      element[i].classList.remove("tremble");
+    }
+    else{
+    element[i].classList.add("tremble");
+    }
+    
+    element[i].classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","move_down","rotate");
+  }
 }
 
 function rotate() {
-  var element = document.getElementById("element");
-  element.classList.add("rotate");
-  element.classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","tremble","move_down");
+  var element = document.getElementsByClassName("element");
+  for(i=0;i<element.length;i++){
+    if(element[i].classList.contains("rotate")){
+      element[i].classList.remove("rotate");
+    }
+    else{
+    element[i].classList.add("rotate");
+    }
+    
+    element[i].classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","tremble","move_down");
+  }
 }
 
 function colorbg(event) {

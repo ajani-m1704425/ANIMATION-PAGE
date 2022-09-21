@@ -47,11 +47,11 @@
     }
 
     40% {
-        -webkit-transform: translateY(-30px);
+        -webkit-transform: translateY(-100px);
     }
 
     60% {
-        -webkit-transform: translateY(-15px);
+        -webkit-transform: translateY(-50px);
     }
 }
 
@@ -113,11 +113,9 @@
     0% {
         opacity: 0;
     }
-
     50% {
         opacity: 0.5;
     }
-
     100% {
         opacity: 1;
     }
@@ -180,8 +178,8 @@
 
 @-webkit-keyframes appear-from-right {
     0% {
-        -webkit-transform: translateX(200px);
-        transform: translateX(200px);
+        -webkit-transform: translateX(-200px);
+        transform: translateX(-200px);
         opacity: 0;
     }
 

@@ -344,14 +344,14 @@ li {
   font-size: 31.7647px;
   line-height: 36px;
 }
-.circle#element {
+.circle {
   width: 80px;
   height: 80px;
   margin: auto;
   margin-top: 200px;
   display: none;
 }
-.square#element {
+.square {
   margin: auto;
   width: 80px;
   height: 80px;
@@ -1148,7 +1148,7 @@ input:focus {
     line-height: 72px;
   }
 
-  .circle#element {
+  .circle {
     width: 160px;
     height: 160px;
     margin: auto;
@@ -1156,7 +1156,7 @@ input:focus {
     display: none;
   }
 
-  .square#element {
+  .square {
     margin: auto;
     width: 160px;
     height: 160px;
@@ -1513,7 +1513,7 @@ input:focus {
     line-height: 72px;
   }
 
-  .circle#element {
+  .circle {
     width: 160px;
     height: 160px;
     margin: auto;
@@ -1521,7 +1521,7 @@ input:focus {
     display: none;
   }
 
-  .square#element {
+  .square {
     margin: auto;
     width: 160px;
     height: 160px;
@@ -1853,7 +1853,7 @@ input:focus {
     line-height: 72px;
   }
 
-  .circle#element {
+  .circle {
     width: 209px;
     height: 209px;
     margin: auto;
@@ -1861,7 +1861,7 @@ input:focus {
     display: none;
   }
 
-  .square#element {
+  .square {
     margin: auto;
     width: 209px;
     height: 209px;
