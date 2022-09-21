@@ -5,13 +5,13 @@ let option2 = document.querySelector(".anime-option2");
 let option3 = document.querySelector(".anime-option3");
 let menu = document.querySelector(".menu_bars");
 let closed = document.querySelector(".close");
-var y = document.querySelector('.etext');
- var z = document.querySelector('.circle');
- var w = document.querySelector('.square');
- let mainMenu = document.querySelector(".menu_ol");
- let mainM = document.querySelector(".unauth_tab .menu");
- let mainM_AUTH = document.querySelector(".auth_tab #menu");
- let drop1 = document.querySelector(".profile_displayname_abbr");
+var y = document.querySelector(".etext");
+var z = document.querySelector(".circle");
+var w = document.querySelector(".square");
+let mainMenu = document.querySelector(".menu_ol");
+let mainM = document.querySelector(".unauth_tab .menu");
+let mainM_AUTH = document.querySelector(".auth_tab #menu");
+let drop1 = document.querySelector(".profile_displayname_abbr");
 let drop2 = document.querySelector(".profile_icon");
 let panel = document.querySelector(".panel");
 let bodyClass = document.querySelector(".body");
@@ -38,268 +38,232 @@ let unpin = document.querySelector(".unpin");
 let editNoteOverlay = document.querySelector("#editNoteOverlay");
 let view_codeLayer = document.querySelector(".view-codeLayer");
 
-
-
-
 // container.addEventListener("click", removeLayers)
-menu.addEventListener("click",showmenu);
-closed.addEventListener("click",showmenu);
-option1.addEventListener("click",changeOption);
-option2.addEventListener("click",changeOption);
-option3.addEventListener("click",changeOption);
+menu.addEventListener("click", showmenu);
+closed.addEventListener("click", showmenu);
+option1.addEventListener("click", changeOption);
+option2.addEventListener("click", changeOption);
+option3.addEventListener("click", changeOption);
 drop1.addEventListener("click", showdropdown);
 drop2.addEventListener("click", showdropdown);
 circle_cancel.addEventListener("click", showdropdown);
 favouritestab.addEventListener("click", showFavourLayer);
 userNotes.addEventListener("click", showUserNoteLayer);
-add_note.addEventListener('click', showEditTextLayer);
+add_note.addEventListener("click", showEditTextLayer);
 // normal_star.addEventListener('click', changeStarGolden);
 // golden_star.addEventListener('click', changeStarNormal);
 
-
-
-viewCode.addEventListener('click', showViewCodetLayer);
-codeView_cancel.addEventListener('click', showViewCodetLayer);
+viewCode.addEventListener("click", showViewCodetLayer);
+codeView_cancel.addEventListener("click", showViewCodetLayer);
 // code_copy.addEventListener('click', CopyText);
-pin_note.addEventListener('click', pinned);
-unpin.addEventListener('click', unpinned);
+pin_note.addEventListener("click", pinned);
+unpin.addEventListener("click", unpinned);
 // threedot.addEventListener('click',showThreedotDropdown)
-
-
 
 //  function removeLayers(){
 //     if(favouriteOverlay.style.display == "block" || userNoteOverlay.style.display == "block"){
 //       userNoteOverlay.style.display = "none"
-//       favouriteOverlay.style.display = "none" 
+//       favouriteOverlay.style.display = "none"
 //     }
 
-    
 // }
 
+function showmenu() {
+  if (mainMenu.style.display == "block") {
+    mainMenu.style.display = "none";
+  } else {
+    mainMenu.style.display = "block";
+  }
 
+  if (mainM.style.display == "none") {
+    mainM.style.display = "block";
+  }
 
-
-function showmenu(){
-    if (mainMenu.style.display == "block"){
-        mainMenu.style.display = "none"
-    }
-    else{
-        mainMenu.style.display = "block"
-    }
-
-     if (mainM.style.display == "none"){
-        mainM.style.display = "block"
-    }
-
-      if (mainM_AUTH.style.display == "none"){
-        mainM_AUTH.style.display = "block"
-    }
+  if (mainM_AUTH.style.display == "none") {
+    mainM_AUTH.style.display = "block";
+  }
 }
 
-function showdropdown(){
-     if (dropdown.style.display == "block"){
-        dropdown.style.display = "none"
-    }
-    else{
-        dropdown.style.display = "block"
-    }
+function showdropdown() {
+  if (dropdown.style.display == "block") {
+    dropdown.style.display = "none";
+  } else {
+    dropdown.style.display = "block";
+  }
 }
 
-
-function changeOption(){
-    if (this==option1){
-        y.style.display="block";
-        z.style.display="none";
-        w.style.display="none";
-        this.setAttribute("class","fa-solid fa-font selected anime-option1");
-        option2.setAttribute("class","fa-solid fa-circle anime-option2");
-        option3.setAttribute("class","fa-solid fa-square anime-option3");
-    }
-    else if(this==option2){
-        z.style.display="block";
-        y.style.display="none";
-        w.style.display="none";
-         this.setAttribute("class","fa-solid fa-circle selected anime-option2");
-        option1.setAttribute("class","fa-solid fa-font anime-option1");
-        option3.setAttribute("class","fa-solid fa-square anime-option3");
-    }
-     if (this==option3){
-        w.style.display="block";
-        y.style.display="none";
-        z.style.display="none";
-         this.setAttribute("class","fa-solid fa-square selected anime-option3");
-        option1.setAttribute("class","fa-solid fa-font anime-option1");
-        option2.setAttribute("class","fa-solid fa-circle   anime-option2");
-    }
+function changeOption() {
+  if (this == option1) {
+    y.style.display = "block";
+    z.style.display = "none";
+    w.style.display = "none";
+    this.setAttribute("class", "fa-solid fa-font selected anime-option1");
+    option2.setAttribute("class", "fa-solid fa-circle anime-option2");
+    option3.setAttribute("class", "fa-solid fa-square anime-option3");
+  } else if (this == option2) {
+    z.style.display = "block";
+    y.style.display = "none";
+    w.style.display = "none";
+    this.setAttribute("class", "fa-solid fa-circle selected anime-option2");
+    option1.setAttribute("class", "fa-solid fa-font anime-option1");
+    option3.setAttribute("class", "fa-solid fa-square anime-option3");
+  }
+  if (this == option3) {
+    w.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+    this.setAttribute("class", "fa-solid fa-square selected anime-option3");
+    option1.setAttribute("class", "fa-solid fa-font anime-option1");
+    option2.setAttribute("class", "fa-solid fa-circle   anime-option2");
+  }
 }
 
-function showFavourLayer(){
-    if (favouriteOverlay.style.display == "block"){
-        favouriteOverlay.style.display = "none"
-        
-    }
-    else{
-        favouriteOverlay.style.display = "block"
-         userNoteOverlay.style.display = "none"
-         view_codeLayer.style.display = "none"
-    }
+function showFavourLayer() {
+  if (favouriteOverlay.style.display == "block") {
+    favouriteOverlay.style.display = "none";
+  } else {
+    favouriteOverlay.style.display = "block";
+    userNoteOverlay.style.display = "none";
+    view_codeLayer.style.display = "none";
+  }
 }
 
-
-function showUserNoteLayer(){
-    if (userNoteOverlay.style.display == "block"){
-       userNoteOverlay.style.display = "none"
-    }
-    else{
-        
-         userNoteOverlay.style.display = "block"
-        favouriteOverlay.style.display = "none"
-        view_codeLayer.style.display = "none"
-    }
+function showUserNoteLayer() {
+  if (userNoteOverlay.style.display == "block") {
+    userNoteOverlay.style.display = "none";
+  } else {
+    userNoteOverlay.style.display = "block";
+    favouriteOverlay.style.display = "none";
+    view_codeLayer.style.display = "none";
+  }
 }
 
-
-function showEditTextLayer(){
-    if (editNoteOverlay.style.display == "block"){
-       editNoteOverlay.style.display = "none"
-    }
-    else{
-         editNoteOverlay.style.display = "block"
-    }
+function showEditTextLayer() {
+  if (editNoteOverlay.style.display == "block") {
+    editNoteOverlay.style.display = "none";
+  } else {
+    editNoteOverlay.style.display = "block";
+  }
 }
 
-
-function showViewCodetLayer(){
-     if (view_codeLayer.style.display == "block"){
-        view_codeLayer.style.display = "none"
-       
-    }
-    else{
-        view_codeLayer.style.display = "block"
-         favouriteOverlay.style.display = "none"
-         userNoteOverlay.style.display = "none"
-    }
+function showViewCodetLayer() {
+  if (view_codeLayer.style.display == "block") {
+    view_codeLayer.style.display = "none";
+  } else {
+    view_codeLayer.style.display = "block";
+    favouriteOverlay.style.display = "none";
+    userNoteOverlay.style.display = "none";
+  }
 }
 
-
-function pinned(){   
-    pin_note.style.display = "none";
-    unpin.style.display="block";
-    document.querySelector('#pinshow').style.display = "inline";
+function pinned() {
+  pin_note.style.display = "none";
+  unpin.style.display = "block";
+  document.querySelector("#pinshow").style.display = "inline";
 }
 
-
-function unpinned(){
-    
-    pin_note.style.display = "block";
-    unpin.style.display="none";
-    document.querySelector('#pinshow').style.display = "none";
+function unpinned() {
+  pin_note.style.display = "block";
+  unpin.style.display = "none";
+  document.querySelector("#pinshow").style.display = "none";
 }
 
-
-
-function changeStars(thise){
-    if(thise.children[1].style.display == "none"){
-        thise.children[1].style.display = "inline"
-        thise.children[0].style.display = "none"
-    }
-    else{
-        thise.children[1].style.display = "none"
-        thise.children[0].style.display = "inline"
-    }
+function changeStars(thise) {
+  if (thise.children[1].style.display == "none") {
+    thise.children[1].style.display = "inline";
+    thise.children[0].style.display = "none";
+  } else {
+    thise.children[1].style.display = "none";
+    thise.children[0].style.display = "inline";
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //function favouritesTab() {
 //    var element = document.getElementById("favouriteOverlay");
 //    element.classList.toggle("favouriteShow")
 //}
 
+document
+  .querySelector(".menu_bars")
+  .addEventListener("click", () =>
+    document.querySelector(".menu_ol").classList.toggle("show")
+  );
 
-
-
-
-
-document.querySelector('.menu_bars').addEventListener
-('click', () => document.querySelector('.menu_ol').classList.toggle('show'));
-
-document.querySelector('.fav1').addEventListener
-('click', () => document.querySelector(".favouriteOverlay").classList.toggle('favouriteShow'));
+document
+  .querySelector(".fav1")
+  .addEventListener("click", () =>
+    document
+      .querySelector(".favouriteOverlay")
+      .classList.toggle("favouriteShow")
+  );
 
 // document.querySelector('.profile_icon').addEventListener
 // ('click', () => document.querySelector('.profileOverlay').classList.toggle('profileShow'));
 
 function moveDown() {
-    var element = document.getElementById("element");
-    element.classList.toggle("move_down")
+  var element = document.getElementById("element");
+  if(element.classList.contains("move_down")){
+    element.classList.remove("move_down");
+  }
+  else{
+  element.classList.add("move_down");
+  }
+  element.classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","tremble","rotate");
 }
 
 function moveUp() {
-    var element = document.getElementById("element");
-    element.classList.toggle("move_up")
+  var element = document.getElementById("element");
+  element.classList.add("move_up");
+  element.classList.remove("move_down","move_left","appear-from-right","bounce","fade","blink","tremble","rotate");
 }
 
 function moveLeft() {
-    var element = document.getElementById("element");
-    element.classList.toggle("move_left")
+  var element = document.getElementById("element");
+  element.classList.add("move_left");
+  element.classList.remove("move_up","move_down","appear-from-right","bounce","fade","blink","tremble","rotate");
 }
 
 function moveRight() {
-    var element = document.getElementById("element");
-    element.classList.toggle("appear-from-right")
+  var element = document.getElementById("element");
+  element.classList.remove("move_up","move_left","move_down","bounce","fade","blink","tremble","rotate");
+  element.classList.add("appear-from-right");
+  
 }
 
 function bounce() {
-    var element = document.getElementById("element");
-    element.classList.toggle("bounce")
+  var element = document.getElementById("element");
+  element.classList.add("bounce");
+  element.classList.remove("move_up","move_left","appear-from-right","move_down","fade","blink","tremble","rotate");
 }
 
 function fade() {
-    var element = document.getElementById("element");
-    element.classList.toggle("fade")
+  var element = document.getElementById("element");
+  element.classList.add("fade");
+  element.classList.remove("move_up","move_left","appear-from-right","bounce","move_down","blink","tremble","rotate");
 }
 
 function blink() {
-    var element = document.getElementById("element");
-    element.classList.toggle("blink")
+  var element = document.getElementById("element");
+  element.classList.add("blink");
+  element.classList.remove("move_up","move_left","appear-from-right","bounce","fade","move_down","tremble","rotate");
 }
 
 function tremble() {
-    var element = document.getElementById("element");
-    element.classList.toggle("tremble")
+  var element = document.getElementById("element");
+  element.classList.add("tremble");
+  element.classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","move_down","rotate");
 }
 
 function rotate() {
-    var element = document.getElementById("element");
-    element.classList.toggle("rotate")
+  var element = document.getElementById("element");
+  element.classList.add("rotate");
+  element.classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","tremble","move_down");
 }
 
-
-
-
-
-
-function colorbg(event){
-    var color = event.value;
-    document.getElementsByTagName('textarea')[0].style.backgroundColor=color;
-    document.getElementsByClassName('change')[0].style.backgroundColor=color;
+function colorbg(event) {
+  var color = event.value;
+  document.getElementsByTagName("textarea")[0].style.backgroundColor = color;
+  document.getElementsByClassName("change")[0].style.backgroundColor = color;
 }
 
 //USerNote OverLay JS
@@ -313,11 +277,8 @@ function colorbg(event){
 // };
 // document.getElementById('notes').style.display = 'none';
 
-
-
-
 //Element options experiment
-if(document.querySelector("body").offsetHeight < screen.height){
-    panel.style.height = "100vh"
-    bodyClass.style.height = "100vh"
+if (document.querySelector("body").offsetHeight < screen.height) {
+  panel.style.height = "100vh";
+  bodyClass.style.height = "100vh";
 }
