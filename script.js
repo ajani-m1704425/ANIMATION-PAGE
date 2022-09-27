@@ -17,7 +17,8 @@ let panel = document.querySelector(".panel");
 let bodyClass = document.querySelector(".body");
 const dropdown = document.querySelector(".profile_dropdown_container");
 let circle_cancel = document.querySelector(".circle_closed");
-
+let editTextLayer = document.querySelector(".editTextLayer");
+let textInput = document.querySelector("#anime-element");
 let favouritestab = document.querySelector(".favouritestab");
 let editText = document.querySelector(".editText");
 let userNotes = document.querySelector(".userNotes");
@@ -25,6 +26,7 @@ let add_note = document.querySelector(".add_note");
 let threedot = document.querySelector(".threedot");
 let viewCode = document.querySelector(".viewCode");
 let codeView_cancel = document.querySelector(".codeView-cancel");
+let editText_cancel = document.querySelector(".editText-cancel");
 let code_copy = document.querySelector(".code-copy");
 // let normal_star = document.querySelectorAll(".animation_options div span #icon");
 // let golden_star = document.querySelectorAll(".golden");
@@ -55,9 +57,12 @@ add_note.addEventListener("click", showEditTextLayer);
 
 viewCode.addEventListener("click", showViewCodetLayer);
 codeView_cancel.addEventListener("click", showViewCodetLayer);
+editText.addEventListener("click", EditTextLayer);
+editText_cancel.addEventListener("click", EditTextLayer);
 // code_copy.addEventListener('click', CopyText);
 pin_note.addEventListener("click", pinned);
 unpin.addEventListener("click", unpinned);
+textInput.defaultValue = "Anima95";
 // threedot.addEventListener('click',showThreedotDropdown)
 
 //  function removeLayers(){
@@ -153,6 +158,13 @@ function showViewCodetLayer() {
     view_codeLayer.style.display = "block";
     favouriteOverlay.style.display = "none";
     userNoteOverlay.style.display = "none";
+  }
+}
+function EditTextLayer(){
+  if (editTextLayer.style.display == "block"){
+    editTextLayer.style.display = "none"
+  }else{
+    editTextLayer.style.display = "block"
   }
 }
 
@@ -330,6 +342,16 @@ function colorbg(event) {
   document.getElementsByClassName("change")[0].style.backgroundColor = color;
 }
 
+
+function ChangetextElement(){
+  if(textInput.value == ""){
+  y.innerHTML = textInput.defaultValue;
+  }
+  else{
+    y.innerHTML = textInput.value;
+  }
+
+}
 //USerNote OverLay JS
 // function toggleText(){
 //     var x = document.getElementById('notes');

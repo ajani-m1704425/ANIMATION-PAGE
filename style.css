@@ -887,7 +887,7 @@ input:focus {
   right: -30px;
 }
 
-.view-codeLayer {
+.view-codeLayer, .editTextLayer {
   display: none;
   position: absolute;
   top: 30%;
@@ -901,7 +901,7 @@ input:focus {
   box-sizing: border-box;
 }
 
-.code-title {
+.code-title, .edit-title  {
   font-family: "Space Grotesk";
   font-style: normal;
   font-weight: 700;
@@ -923,14 +923,19 @@ input:focus {
   color: #2f2d33;
   padding: 16px 16px;
 }
-.codeView-cancel {
+.codeView-cancel, .editText-cancel, .userNote-cancel {
   width: 24px;
   height: 24px;
   margin-left: 90%;
   margin-bottom: 10px;
   cursor: pointer;
 }
-.code-copy {
+.userNote-cancel{
+ position: absolute;
+ top: -25px;
+ left: 2px;
+}
+.code-copy, .submitText {
   margin-top: 28px;
   width: fit-content;
   background: #3a0ca3;
@@ -945,6 +950,32 @@ input:focus {
   line-height: 30px;
   cursor: pointer;
 }
+/* .editTextLayer{
+  display: block;
+} */
+
+#anime-element{
+  display: block;
+  width: 100%;
+    font-size: 14px;
+    padding: 16px 16px;
+    box-sizing: border-box;
+    border: none;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+background-color: rgba(255, 255, 255, 0.753);
+}
+
+
+ .editText-code-container {
+   /* background: #e8e6eb; */
+   text-align: center;
+   margin: auto;
+   width: 80%;
+ }
+
+
+
+
 
 @media only screen and (min-width: 700px) {
   .panel {
@@ -1277,7 +1308,7 @@ input:focus {
     position: relative;
     top: 4px;
   }
-  .view-codeLayer {
+  .view-codeLayer, editTextLayer {
     display: none;
     position: absolute;
     top: 30%;
@@ -1291,7 +1322,7 @@ input:focus {
     box-sizing: border-box;
   }
 
-  .code-title {
+  .code-title, .edit-title {
     font-family: "Space Grotesk";
     font-style: normal;
     font-weight: 700;
@@ -1315,7 +1346,7 @@ input:focus {
     padding: 16px 32px;
   }
 
-  .code-copy {
+  .code-copy, .submitText {
     margin-top: 28px;
     width: fit-content;
     background: #3a0ca3;
@@ -1587,7 +1618,8 @@ input:focus {
     top: 4px;
   }
 
-  .view-codeLayer {
+  .view-codeLayer,
+  .editTextLayer {
     display: none;
     position: absolute;
     top: 30%;
@@ -1601,7 +1633,8 @@ input:focus {
     box-sizing: border-box;
   }
 
-  .code-title {
+  .code-title,
+  .edit-title {
     font-family: "Space Grotesk";
     font-style: normal;
     font-weight: 700;
@@ -1625,7 +1658,8 @@ input:focus {
     padding: 16px 32px;
   }
 
-  .code-copy {
+  .code-copy,
+  .submitText {
     margin-top: 28px;
     width: fit-content;
     background: #3a0ca3;

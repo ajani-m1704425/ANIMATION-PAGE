@@ -264,6 +264,7 @@
         
         
         <div id="userNoteOverlay">
+          <img src="./images/close-circle.png" alt="" class="userNote-cancel">
           <section class="note">
             <div class="headed">
               <span class="iconify find" data-icon="bi:search"></span>
@@ -353,7 +354,16 @@
           </div>
           <button class="code-copy">Copy Code</button>
         </div>
-        
+        <div class="editTextLayer">
+          <img src="./images/close-circle.png" alt="" class="editText-cancel">
+          <h3 class="edit-title">Text goes here</h3>
+          <div class="editText-code-container">
+            <form action="">
+              <input type="text" name="anime-element" id="anime-element">
+            </form>
+          </div>
+          <button onclick="ChangetextElement()" class="submitText">Change Text</button>
+        </div>
         <script src="script.js">
 
         </script>
