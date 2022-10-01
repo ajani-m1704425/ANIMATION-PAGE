@@ -3,12 +3,12 @@ const container = document.querySelector(".container");
 let option1 = document.querySelector(".anime-option1");
 let option2 = document.querySelector(".anime-option2");
 let option3 = document.querySelector(".anime-option3");
-let menu = document.querySelector(".menu_bars");
+let menu = document.querySelector("#menu_bars");
 let closed = document.querySelector(".close");
 var y = document.querySelector(".etext");
 var z = document.querySelector(".circle");
 var w = document.querySelector(".square");
-let mainMenu = document.querySelector(".menu_ol");
+let mainMenu = document.querySelectorAll(".menu_ol");
 let mainM = document.querySelector(".unauth_tab .menu");
 let mainM_AUTH = document.querySelector(".auth_tab #menu");
 let drop1 = document.querySelector(".profile_displayname_abbr");
@@ -77,18 +77,20 @@ textInput.defaultValue = "Anima95";
 // }
 
 function showmenu() {
-  if (mainMenu.style.display == "block") {
-    mainMenu.style.display = "none";
-  } else {
-    mainMenu.style.display = "block";
-  }
+  for(i=0;i<mainMenu.length;i++){
+    if (mainMenu[i].style.display == "block") {
+      mainMenu[i].style.display = "none";
+    } else {
+      mainMenu[i].style.display = "block";
+    }
 
-  if (mainM.style.display == "none") {
-    mainM.style.display = "block";
-  }
+    if (mainM.style.display == "none") {
+      mainM.style.display = "block";
+    }
 
-  if (mainM_AUTH.style.display == "none") {
-    mainM_AUTH.style.display = "block";
+    if (mainM_AUTH.style.display == "none") {
+      mainM_AUTH.style.display = "block";
+    }
   }
 }
 
