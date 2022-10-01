@@ -26,6 +26,7 @@ let add_note = document.querySelector(".add_note");
 let threedot = document.querySelector(".threedot");
 let viewCode = document.querySelector(".viewCode");
 let codeView_cancel = document.querySelector(".codeView-cancel");
+let codeView_code = document.querySelector(".codeview-code");
 let editText_cancel = document.querySelector(".editText-cancel");
 let code_copy = document.querySelector(".code-copy");
 // let normal_star = document.querySelectorAll(".animation_options div span #icon");
@@ -39,6 +40,8 @@ let pin_note = document.querySelector(".pin-note");
 let unpin = document.querySelector(".unpin");
 let editNoteOverlay = document.querySelector("#editNoteOverlay");
 let view_codeLayer = document.querySelector(".view-codeLayer");
+let copied =  document.querySelector(".copied");
+let tocopy =  document.querySelector(".tocopy");
 
 // container.addEventListener("click", removeLayers)
 menu.addEventListener("click", showmenu);
@@ -220,7 +223,10 @@ function moveDown() {
     }
     else{
     element[i].classList.add("move_down");
+    codeView_code.innerHTML="&lt; tagName class=&quot;move_down&quot; &gt; TagValue &lt; tagName /&gt;"
     }
+    copied.style.display="none";
+     tocopy="inline";
     element[i].classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","tremble","rotate");
   }
 }
@@ -233,7 +239,10 @@ function moveUp() {
     }
     else{
     element[i].classList.add("move_up");
+    codeView_code.innerHTML="&lt; tagName class=&quot;move_up&quot; &gt; TagValue &lt; tagName /&gt;"
     }
+    copied.style.display="none";
+     tocopy="inline";
     element[i].classList.remove("move_down","move_left","appear-from-right","bounce","fade","blink","tremble","rotate");
 }
 }
@@ -246,8 +255,10 @@ function moveLeft() {
     }
     else{
     element[i].classList.add("move_left");
+    codeView_code.innerHTML="&lt; tagName class=&quot;move_left&quot; &gt; TagValue &lt; tagName /&gt;"
     }
-    
+    copied.style.display="none";
+     tocopy="inline";
     element[i].classList.remove("move_up","move_down","appear-from-right","bounce","fade","blink","tremble","rotate");
 }
 }
@@ -260,7 +271,10 @@ function moveRight() {
     }
     else{
     element[i].classList.add("appear-from-right");
+    codeView_code.innerHTML="&lt; tagName class=&quot;appear-from-right&quot; &gt; TagValue &lt; tagName /&gt;"
     }
+    copied.style.display="none";
+     tocopy="inline";
     element[i].classList.remove("move_up","move_left","move_down","bounce","fade","blink","tremble","rotate");
 }
   
@@ -275,7 +289,10 @@ function bounce() {
     }
     else{
     element[i].classList.add("bounce");
+     codeView_code.innerHTML="&lt; tagName class=&quot;bounce&quot; &gt; TagValue &lt; tagName /&gt;"
     }
+    copied.style.display="none";
+     tocopy="inline";
     element[i].classList.remove("move_up","move_left","appear-from-right","move_down","fade","blink","tremble","rotate");
 }
 }
@@ -288,8 +305,10 @@ function fade() {
     }
     else{
     element[i].classList.add("fade");
+     codeView_code.innerHTML="&lt; tagName class=&quot;fade&quot; &gt; TagValue &lt; tagName /&gt;"
     }
-    
+    copied.style.display="none";
+     tocopy="inline";
     element[i].classList.remove("move_up","move_left","appear-from-right","bounce","move_down","blink","tremble","rotate");
 }
 }
@@ -302,8 +321,10 @@ function blink() {
     }
     else{
     element[i].classList.add("blink");
+     codeView_code.innerHTML="&lt; tagName class=&quot;blink&quot; &gt; TagValue &lt; tagName /&gt;"
     }
-    
+    copied.style.display="none";
+     tocopy="inline";
     element[i].classList.remove("move_up","move_left","appear-from-right","bounce","fade","move_down","tremble","rotate");
   }
 }
@@ -316,8 +337,10 @@ function tremble() {
     }
     else{
     element[i].classList.add("tremble");
+     codeView_code.innerHTML="&lt;tagName class=&quot;tremble&quot;&gt;TagValue&lt;tagName/&gt;"
     }
-    
+    copied.style.display="none";
+     tocopy="inline";
     element[i].classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","move_down","rotate");
   }
 }
@@ -330,11 +353,14 @@ function rotate() {
     }
     else{
     element[i].classList.add("rotate");
+     codeView_code.innerHTML="&lt;tagName class=&quot;rotate&quot;&gt;TagValue&lt;tagName/&gt;"
     }
-    
+     copied.style.display="none";
+     tocopy="inline";
     element[i].classList.remove("move_up","move_left","appear-from-right","bounce","fade","blink","tremble","move_down");
   }
 }
+
 
 function colorbg(event) {
   var color = event.value;
@@ -350,6 +376,13 @@ function ChangetextElement(){
   else{
     y.innerHTML = textInput.value;
   }
+
+}
+
+function copyTextCode(){
+ navigator.clipboard.writeText(codeView_code.innerHTML);
+ copied.style.display="inline"
+ tocopy="none"
 
 }
 //USerNote OverLay JS

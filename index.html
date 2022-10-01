@@ -352,7 +352,11 @@
               &lt; link rel=&quot;stylesheet&quot; href=&quot;animate.css&quot;&gt;
             </p>
           </div>
-          <button class="code-copy">Copy Code</button>
+          <div class="tooltip">
+            <span class="tooltiptext tocopy">Click to Copy</span>
+            <span class="tooltiptext copied">Copied!</span>
+            <button onclick="copyTextCode()" class="code-copy">Copy Code</button>
+          </div>  
         </div>
         <div class="editTextLayer">
           <img src="./images/close-circle.png" alt="" class="editText-cancel">
@@ -362,7 +366,8 @@
               <input type="text" name="anime-element" id="anime-element">
             </form>
           </div>
-          <button onclick="ChangetextElement()" class="submitText">Change Text</button>
+    
+            <button onclick="ChangetextElement()" class="submitText">Change Text</button>
         </div>
         <script src="script.js">
 
